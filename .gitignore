@@ -1,0 +1,16 @@
+# Raw data (too large for GitHub — download separately)
+College_Scorecard_Raw_Data_10032025/
+
+# OS files
+.DS_Store
+
+# Matplotlib cache
+.mplconfig/
+
+# Cursor IDE
+.cursor/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
