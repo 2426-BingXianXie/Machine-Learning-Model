@@ -8,14 +8,21 @@
     "target_min": 6786.0,
     "target_max": 302526.0
   },
+  "normalization": {
+    "method": "StandardScaler (z-score)",
+    "target_mean_used": 53690.94743794484,
+    "target_std_used": 24678.85382953314
+  },
   "model_results": {
     "lasso": {
-      "mse": 194171544.66950363,
-      "r2": 0.6790528496633769
+      "mse_normalized": 0.3896714314767446,
+      "r2": 0.6077197198408102,
+      "rmse_dollar": 15405.445757414327
     },
     "random_forest": {
-      "mse": 176401062.95121846,
-      "r2": 0.708425770795051
+      "mse_normalized": 0.28961627396215506,
+      "r2": 0.7084447462366378,
+      "rmse_dollar": 13281.174002950074
     }
   },
   "model_test_split": {
