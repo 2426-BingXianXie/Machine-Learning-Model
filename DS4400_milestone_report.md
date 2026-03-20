@@ -135,10 +135,11 @@ The approach follows the same structure as the proposal, adapted to the actual p
 
 4. **Preprocess features:**
 
-   - Numeric: median imputation + z-score scaling.
+   - Numeric: median imputation + z-score scaling (StandardScaler).
    - Categorical: most-frequent imputation + one-hot encoding.
+   - Target variable: z-score normalized so that MSE is on a comparable scale across features.
 
-5. **Train and evaluate regression models** using an 80/20 train/test split and compute MSE and R².
+5. **Train and evaluate regression models** using an 80/20 train/test split. MSE is computed on the normalized target; RMSE is inverse-transformed to dollars for interpretability. R² is scale-invariant.
 
 ### Feature engineering / selection (planned + milestone implementation)
 
@@ -162,15 +163,17 @@ By this milestone, **two models** have been trained on a shared preprocessing pi
 
 #### Preliminary results (test set)
 
-Split: 80/20 (random_state = 42)
+Split: 80/20 (random_state = 42). All continuous features and the target variable are normalized (z-score standardized) before training. MSE is reported on the normalized scale; RMSE is inverse-transformed back to dollars for interpretability.
 
 - **Lasso**
-    - MSE: 194,171,544.67
-    - R²: 0.6791
+    - Normalized MSE: 0.3897
+    - R²: 0.6077
+    - RMSE (dollars): $15,405
 
 - **Random Forest**
-    - MSE: 176,401,062.95
+    - Normalized MSE: 0.2896
     - R²: 0.7084
+    - RMSE (dollars): $13,281
 
 **Figure 6.** Residual diagnostics (test set, side-by-side).
 
