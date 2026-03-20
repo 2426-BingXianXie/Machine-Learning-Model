@@ -1,0 +1,41 @@
+{
+  "dataset": {
+    "n_total_rows": 229188,
+    "n_target_usable": 50721,
+    "target_mean": 53690.94743794484,
+    "target_median": 48757.0,
+    "target_std": 24679.09711356496,
+    "target_min": 6786.0,
+    "target_max": 302526.0
+  },
+  "model_results": {
+    "lasso": {
+      "mse": 194171544.66950363,
+      "r2": 0.6790528496633769
+    },
+    "random_forest": {
+      "mse": 176401062.95121846,
+      "r2": 0.708425770795051
+    }
+  },
+  "model_test_split": {
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "feature_sets": {
+    "numeric": [
+      "IPEDSCOUNT1",
+      "IPEDSCOUNT2",
+      "EARN_COUNT_NWNE_HI_1YR",
+      "EARN_COUNT_NWNE_1YR",
+      "EARN_COUNT_NWNE_4YR",
+      "EARN_COUNT_NWNE_5YR"
+    ],
+    "categorical": [
+      "CONTROL",
+      "CREDLEV",
+      "DISTANCE",
+      "CIPCODE"
+    ]
+  }
+}
