@@ -1,28 +1,38 @@
 {
   "dataset": {
-    "n_total_rows": 229188,
-    "n_target_usable": 50721,
-    "target_mean": 53690.94743794484,
-    "target_median": 48757.0,
-    "target_std": 24679.09711356496,
-    "target_min": 6786.0,
-    "target_max": 302526.0
+    "n_total_rows": 227980,
+    "n_target_usable": 58102,
+    "target_mean": 64909.9140477092,
+    "target_median": 59017.5,
+    "target_std": 27730.067669206866,
+    "target_min": 6917.0,
+    "target_max": 336392.0
   },
   "normalization": {
     "method": "StandardScaler (z-score)",
-    "target_mean_used": 53690.94743794484,
-    "target_std_used": 24678.85382953314
+    "target_mean_used": 64909.9140477092,
+    "target_std_used": 27729.829035536884
   },
   "model_results": {
     "lasso": {
-      "mse_normalized": 0.3896714314767446,
-      "r2": 0.6077197198408102,
-      "rmse_dollar": 15405.445757414327
+      "mse_normalized": 0.3839084937571723,
+      "r2": 0.6161214750325612,
+      "rmse_dollar": 17181.499047505742
     },
     "random_forest": {
-      "mse_normalized": 0.28961627396215506,
-      "r2": 0.7084447462366378,
-      "rmse_dollar": 13281.174002950074
+      "mse_normalized": 0.2644024748837757,
+      "r2": 0.7356181649882345,
+      "rmse_dollar": 14258.700601903181
+    },
+    "ridge": {
+      "mse_normalized": 0.3152118368286168,
+      "r2": 0.684812769340335,
+      "rmse_dollar": 15568.560219630454
+    },
+    "gradient_boosting": {
+      "mse_normalized": 0.3621333955829795,
+      "r2": 0.6378948733919564,
+      "rmse_dollar": 16687.12351169864
     }
   },
   "model_test_split": {
@@ -33,10 +43,14 @@
     "numeric": [
       "IPEDSCOUNT1",
       "IPEDSCOUNT2",
+      "DEBT_ALL_STGP_EVAL_MDN",
+      "DEBT_ALL_STGP_EVAL_MEAN",
+      "DEBT_ALL_STGP_EVAL_MDN10YRPAY",
+      "DEBT_ALL_STGP_ANY_MDN",
       "EARN_COUNT_NWNE_HI_1YR",
       "EARN_COUNT_NWNE_1YR",
-      "EARN_COUNT_NWNE_4YR",
-      "EARN_COUNT_NWNE_5YR"
+      "BBRR2_FED_COMP_N",
+      "BBRR3_FED_COMP_N"
     ],
     "categorical": [
       "CONTROL",
